@@ -47,10 +47,10 @@ function tick() {
             prepareRestart();
         }
 
-        if(timer % (300*gameSpeed) === 0) {
+        if(timer % (400*gameSpeed) === 0) {
             save();
         }
-        gameTicksLeft -= (1000 / 50) / gameSpeed / bonusSpeed;
+        gameTicksLeft -= (100 / 5) / gameSpeed / bonusSpeed;
         if(bonusSpeed > 1) {
             addOffline(-1 * gameTicksLeft * ((bonusSpeed - 1)/bonusSpeed));
         }
