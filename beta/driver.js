@@ -396,12 +396,12 @@ function addOffline(num) {
         if(totalOfflineMs < 0) {
             totalOfflineMs = 0;
         }
-        document.getElementById("bonusSeconds").innerHTML = intToString(totalOfflineMs / 100, 2);
+        document.getElementById("bonusSeconds").innerHTML = intToString(totalOfflineMs / 1, 2);
     }
 }
 
 function toggleOffline() {
-    if(bonusSpeed === 1) { //go fast
+    if(bonusSpeed === 2) { //go fast
         bonusSpeed = 4;
         document.getElementById('isBonusOn').innerHTML = _txt("time_controls>bonus_seconds>state>on");
     } else { //take it slow
