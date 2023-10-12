@@ -401,11 +401,11 @@ function addOffline(num) {
 }
 
 function toggleOffline() {
-    if(bonusSpeed === 2) { //go fast
+    if(bonusSpeed === 1) { //go fast
         bonusSpeed = 4;
         document.getElementById('isBonusOn').innerHTML = _txt("time_controls>bonus_seconds>state>on");
     } else { //take it slow
-        bonusSpeed = 2;
+        bonusSpeed = 1;
         document.getElementById('isBonusOn').innerHTML = _txt("time_controls>bonus_seconds>state>off");
     }
 }
