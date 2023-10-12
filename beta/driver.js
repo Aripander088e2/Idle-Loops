@@ -1,6 +1,6 @@
 'use strict';
 
-let gameSpeed = 3;
+let gameSpeed = 5;
 
 let curTime = new Date();
 let gameTicksLeft = 0;
@@ -396,7 +396,7 @@ function addOffline(num) {
         if(totalOfflineMs < 0) {
             totalOfflineMs = 0;
         }
-        document.getElementById("bonusSeconds").innerHTML = intToString(totalOfflineMs / 1000, 2);
+        document.getElementById("bonusSeconds").innerHTML = intToString(totalOfflineMs / 100, 2);
     }
 }
 
@@ -405,7 +405,7 @@ function toggleOffline() {
         bonusSpeed = 4;
         document.getElementById('isBonusOn').innerHTML = _txt("time_controls>bonus_seconds>state>on");
     } else { //take it slow
-        bonusSpeed = 1;
+        bonusSpeed = 2;
         document.getElementById('isBonusOn').innerHTML = _txt("time_controls>bonus_seconds>state>off");
     }
 }
